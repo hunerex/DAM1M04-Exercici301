@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/estils.css">
+  <title>{{title}}</title>
+</head>
+<body>
+  {{> header}}
+
+  <main>
+    <h1>{{title}}</h1>
+    <h2>{{subtitle}}</h2>
+    <p>{{notice}}</p>
+
+    {{#if showWarning}}
+      <div class="warning">
+        ⚠️ Aquest és un missatge d’advertència.
+      </div>
+    {{/if}}
+  </main>
+</body>
+</html>

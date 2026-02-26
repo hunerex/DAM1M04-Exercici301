@@ -1,0 +1,16 @@
+{
+  "name": "dam1m04-exercici301",
+  "version": "1.0.0",
+  "description": "Servidor amb Express + Handlebars",
+  "main": "server/app.js",
+  "scripts": {
+    "dev": "node --watch --watch-path ./server ./server/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1",
+    "hbs": "^4.2.0"
+  }
+}

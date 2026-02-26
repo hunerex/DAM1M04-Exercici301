@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/estils.css">
+  <title>Informe de ciutats</title>
+</head>
+<body>
+  {{> header}}
+
+  <main>
+    <h1>{{title}} - Informe</h1>
+    <p>{{subtitle}}</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Ciutat</th>
+          <th>País</th>
+          <th>Població</th>
+          <th>Tipus</th>
+          <th>Mida</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each cities}}
+        <tr>
+          <td><strong>{{name}}</strong></td>
+          <td>{{lookup ../countries country}}</td>
+          <td>
+            {{#if population}}
+              {{population}} hab.
+            {{else}}
+              <em>Desconeguda</em>
+            {{/if}}
+          </td>
+          <td>
+            {{#if coastal}}
+              🌊 Costanera
+            {{else}}
+              Interior
+            {{/if}}
+          </td>
+          <td>
+            {{#if population}}
+              {{#if (lte population 800000)}}
+                Petita
+              {{else}}
+                Gran
+              {{/if}}
+            {{else}}
+              —
+            {{/if}}
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>
